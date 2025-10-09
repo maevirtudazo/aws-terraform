@@ -31,5 +31,5 @@ jobs:
       - name: Deploy using Terraform
         run: |
           terraform init 
-          terraform plan -var-file=environments/dev/terraform.tfvars
+          terraform plan -var-file="environments/dev/terraform.tfvars"
           terraform apply -auto-approve
