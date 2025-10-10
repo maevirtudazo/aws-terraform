@@ -17,4 +17,5 @@ variable "subnet_cidr" {
 
 variable "availability_zone" {
   description = "Availability zone for the subnet"
+  default     = "ap-southeast-1a"
 }
