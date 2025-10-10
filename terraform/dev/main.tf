@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 module "network" {
-  source            = "./modules/network"
+  source            = "../modules/network"
   environment       = var.environment
   vpc_cidr          = var.vpc_cidr
   availability_zone = var.availability_zone
