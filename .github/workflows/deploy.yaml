@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./terraform
+        working-directory: ./terraform/dev
 
     steps:
       - name: Checkout repository
@@ -34,5 +34,5 @@ jobs:
       - name: Deploy using Terraform
         run: |
           terraform init 
-          terraform plan -var-file="environments/dev/terraform.tfvars"
-          terraform apply -auto-approve -var-file="environments/dev/terraform.tfvars"
+          terraform plan -var-file="terraform.tfvars"
+          terraform apply -auto-approve -var-file="terraform.tfvars"
