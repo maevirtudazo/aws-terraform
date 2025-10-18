@@ -7,11 +7,11 @@ output "security_groups_ids" {
 }
 
 output "subnet_id" {
-  value = module.network.subnet.id
+  value = module.network.subnet_id
 }
 
 output "instance_id" {
-  value = module.compute.id
+  value = module.compute.instance_id
 }
 
 output "public_ip" {
