@@ -31,7 +31,7 @@ module "compute" {
   source              = "../modules/compute"
   instance_name       = "mae-http-instance"
   instance_type       = "t3.micro"
-  ami_id              = "ami-0abcdef1234567890"
+  ami_id              = "ami-00415ad0da23eebc1"
   subnet_id           = module.network.subnet_id
   security_group_ids  = module.network.security_group_ids
 }
