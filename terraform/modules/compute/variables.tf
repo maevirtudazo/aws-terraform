@@ -20,5 +20,5 @@ variable "subnet_id" {
 
 variable "security_group_ids" {
     description = "List of security groups to attach"
-    type        = string
+    type        = list(string)
 }
