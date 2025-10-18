@@ -23,5 +23,15 @@ module "network" {
   environment       = var.environment
   vpc_cidr          = var.vpc_cidr
   availability_zone = var.availability_zone
+  subnet_cidr       = var.subnet_cidr
 
+}
+
+module "compute" {
+  source              = "../modules/compute"
+  instance_name       = "mae-http-instance"
+  instance_type       = "t3.micro"
+  ami_id              = "ami-0abcdef1234567890"
+  subnet_id           = module.network.subnet_id
+  security_group_ids  = module.network.security_group_ids
 }
