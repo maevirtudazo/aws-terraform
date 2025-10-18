@@ -3,7 +3,7 @@ output "vpc_id" {
 }
 
 output "security_groups_ids" {
-  value = module.network.security_group.ids
+  value = module.network.security_group_ids
 }
 
 output "subnet_id" {
